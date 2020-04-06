@@ -1,5 +1,7 @@
 ## Git使用指南
 
+> [廖雪峰教程](https://www.liaoxuefeng.com/) 
+
 #### 1. 创建repository
 
 ``git init``
@@ -50,3 +52,12 @@ eaadf4e HEAD@{4}: commit (initial): wrote a readme file
 
 #### ==变向说明在提交时写说明的重要性==
 
+#### 9.关联github
+
++ 设置ssh
++ Creat a new repo
++ ``git remote add origin git@github.com:账户名/仓库名.git``
++ 推送到远程仓库  ``git push -u origin master``
+  + 由于远程库是空的，我们第一次推送`master`分支时，加上了`-u`参数，Git不但会把本地的`master`分支内容推送的远程新的`master`分支，还会把本地的`master`分支和远程的`master`分支关联起来，在以后的推送或者拉取时就可以简化命令。
++ 从现在起，只要本地作了提交，就可以通过命令： ``git push origin master``
++ 
